@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.IO Chatting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="pages">
+        <li class="chat page">
+            <div class="chatArea">
+                <ul class="messages"></ul>
+            </div>
+            <input class="inputMessage" placeholder="보내고 싶은 메세지를 작성해주세요" />
+            <button style="position:absolute;bottom: 0;right:0; width:60px;height:60px;" onclick="$('.inputMessage').val($('.emoji li').text());">이모티콘</button>
+            <div class="emoji" style="position: absolute; bottom: 60px; right: 17px;">
+                <ul>
+                    <li>&#x1F600</li>
+                </ul>
+            </div>
+        </li>
+        <li class="login page">
+            <div class="form">
+                <h3 class="title">닉네임을 설정해주세요!</h3>
+                <input class="usernameInput" type="text" maxlength="14" />
+            </div>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chat.js"></script>
+</body>
+
+</html>
